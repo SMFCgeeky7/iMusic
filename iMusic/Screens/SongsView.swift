@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct SongsView: View {
+    @State var songs: [Song] = []
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            ScrollView {
+                ForEach(songs) { song in
+                    
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Text ("Songs")
+                        .font(.headline)
+                }
+            }
+        }
     }
 }
 
